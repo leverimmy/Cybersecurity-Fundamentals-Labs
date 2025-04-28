@@ -41,7 +41,7 @@ public class PartyB {
             out.writeUTF(Crypto.base64Encode(encryptedWithAES));
             System.out.println("Party B: Sent double encrypted session key to A");
             
-            // 步骤 3: 接收加密的NA并解密
+            // 步骤 3: 接收加密的 NA 并解密
             String encryptedNAStr = in.readUTF();
             byte[] NA = Crypto.desDecrypt(Crypto.base64Decode(encryptedNAStr), Ks);
             System.out.println("Party B: Received and decrypted NA from A");
