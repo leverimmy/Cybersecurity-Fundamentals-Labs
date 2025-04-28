@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void malicious_function() {
     printf("Malicious function executed!\n");
