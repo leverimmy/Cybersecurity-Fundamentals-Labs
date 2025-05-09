@@ -33,7 +33,7 @@ int main() {
 对其进行编译：
 
 ```bash
-gcc victim.c -o victim -g -m32 -fno-stack-protector -no-pie 
+gcc victim.c -o victim -g -m32 -fno-stack-protector -no-pie
 ```
 
 注意，这里将编译目标指定为 32 位（`-m32`），关闭了 Stack Canary 保护（`-fno-stack-protector`），关闭了 PIE（`-no-pie`）。
