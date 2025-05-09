@@ -27,7 +27,7 @@ public class PartyB {
             
             System.out.println("Party B: Connection established with A");
             
-            // 步骤1: 接收加密的公钥并解密
+            // 步骤 1: 接收加密的公钥并解密
             String encryptedPublicKeyStr = in.readUTF();
             byte[] decryptedPublicKey = Crypto.aesDecrypt(Crypto.base64Decode(encryptedPublicKeyStr), password);
             PublicKey publicKey = KeyFactory.getInstance(Constants.RSA)
